@@ -1,14 +1,20 @@
-package org.example;
+/*
+ * Given an array nums. We define a running sum of an array as runningSum[i] = sum(nums[0]…nums[i]).
+ * Return the running sum of nums.
+
+ * Example 1:
+ *
+ * Input: nums = [1,2,3,4]
+ * Output: [1,3,6,10]
+ * Explanation: Running sum is obtained as follows: [1, 1+2, 1+2+3, 1+2+3+4].
+ */
+
+package org.example.LeetCode;
 
 import java.util.Arrays;
 
-/**
- * Hello world!
- *
- */
+public class RunningSumOfArray {
 
-public class App 
-{
     public static void main( String[] args )
     {
         int [] x = {1,1,1,1};
@@ -16,7 +22,6 @@ public class App
         System.out.print(Arrays.toString(x));
 
     }
-
 
     public static int[] runningSum(int[] nums) {
         int sum = 0;
