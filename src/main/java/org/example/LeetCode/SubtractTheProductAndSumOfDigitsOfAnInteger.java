@@ -1,3 +1,5 @@
+package org.example.LeetCode;
+
 /*Given an integer number n, return the difference between the product of its digits and the sum of its digits.
 Example 1:
 Input: n = 234
@@ -7,9 +9,6 @@ Product of digits = 2 * 3 * 4 = 24
 Sum of digits = 2 + 3 + 4 = 9
 Result = 24 - 9 = 15
 */
-
-
-package org.example.LeetCode;
 
 public class SubtractTheProductAndSumOfDigitsOfAnInteger {
 
@@ -36,3 +35,22 @@ public class SubtractTheProductAndSumOfDigitsOfAnInteger {
         return product - sum;
     }
 }
+
+//class Test {
+//    public static void main(String args[]) {
+//        int x = 5;
+//        System.out.println(x++);
+//        //output 5
+//    }
+//}
+
+//Dupa inițializarea serverului Tomcat pe mașina locală, cum pot afla dacă acesta funcționează?
+//        Select one:
+//        A.
+//        prin rularea din Terminal a comenzii: “sudo chmod +x Tomcat”
+//        X B.
+//        prin accesarea într-un browser a adresei “localhost” și a portului 8080 pe care îl folosește Tomcat,
+//        ex:  http://localhost:8080
+//        C.
+//        prin accesarea interfeței Workbench sau HeidiSQL pentru a vedea dacă este pornit serverul
+
