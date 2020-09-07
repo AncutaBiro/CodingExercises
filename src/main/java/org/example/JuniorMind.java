@@ -6,53 +6,49 @@ import java.util.List;
 public class JuniorMind {
 
     public static void main(String[] args) {
-        List<Integer> unsortedList = new ArrayList<>();
-        unsortedList.add(23);
-        unsortedList.add(4);
-        unsortedList.add(6);
-        unsortedList.add(12);
-        unsortedList.add(34);
-        unsortedList.add(8);
-        unsortedList.add(2);
-        unsortedList.add(19);
 
-        System.out.println(list(unsortedList));
+        List<Integer> list = new ArrayList<>();
+        list.add(23);
+        list.add(4);
+        list.add(6);
+        list.add(12);
+        list.add(34);
+        list.add(8);
+        list.add(2);
+        list.add(19);
 
-
+        rearrange(list);
     }
 
-    public static List<Integer> list (List<Integer> unsortedList) {
+    public static void rearrange (List<Integer> list) {
 
-        int min = unsortedList.get(0);
-        int max = unsortedList.get(0);
-        int lastIndex = unsortedList.size() - 1;
+        int min = list.get(0);
+        int max = list.get(0);
+        int lastIndex = list.size() - 1;
 
-        for (int i = 1; i < unsortedList.size(); i++) {
-            if (unsortedList.get(i) < min){
-                min = unsortedList.get(i);
+        for (int i = 1; i < list.size(); i++) {
+            if (list.get(i) < min) {
+                min = list.get(i);
             }
 
         }
         System.out.println(min);
-        System.out.println(lastIndex);
 
-//        unsortedList.set (unsortedList.indexOf(min), unsortedList.get(lastIndex));
-//        unsortedList.set (unsortedList.get(lastIndex), min);
+        list.set(list.indexOf(min), list.get(lastIndex));
+        list.set(lastIndex, min);
 
 
-        for (int i = 1; i< unsortedList.size(); i++) {
-            if (unsortedList.get(i) > max){
-                max = unsortedList.get(i);
+        for (int i = 1; i < list.size(); i++) {
+            if (list.get(i) > max) {
+                max = list.get(i);
             }
 
         }
         System.out.println(max);
 
-        unsortedList.set (unsortedList.indexOf(max), unsortedList.get(0));
-        unsortedList.set (0, max);
+        list.set(list.indexOf(max), list.get(0));
+        list.set(0, max);
 
-
-
-        return unsortedList;
+        System.out.println(list);
     }
 }
