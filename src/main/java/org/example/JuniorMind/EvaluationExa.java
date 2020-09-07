@@ -1,9 +1,9 @@
-package org.example;
+package org.example.JuniorMind;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class JuniorMind {
+public class EvaluationExa {
 
     public static void main(String[] args) {
 
@@ -17,10 +17,11 @@ public class JuniorMind {
         list.add(2);
         list.add(19);
 
+        System.out.println(list);
         rearrange(list);
     }
 
-    public static void rearrange (List<Integer> list) {
+    public static void rearrange(List<Integer> list) {
 
         int min = list.get(0);
         int max = list.get(0);
@@ -32,8 +33,6 @@ public class JuniorMind {
             }
 
         }
-        System.out.println(min);
-
         list.set(list.indexOf(min), list.get(lastIndex));
         list.set(lastIndex, min);
 
@@ -44,8 +43,6 @@ public class JuniorMind {
             }
 
         }
-        System.out.println(max);
-
         list.set(list.indexOf(max), list.get(0));
         list.set(0, max);
 
