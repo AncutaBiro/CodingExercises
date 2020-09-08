@@ -19,18 +19,21 @@ public class EvaluationExb {
 
         StringBuffer operatedList = new StringBuffer(list);
 
-//        char[] listChar = list.toCharArray();
+        char[] listChar = list.toCharArray();
 
         for (int i = 0; i < list.length(); i++) {
-            if (list.charAt(i) == X && list.charAt(i) == Y) {
+            System.out.print(operatedList.charAt(i));
+
+            if (operatedList.charAt(i) == X) {
                 operatedList.deleteCharAt(i);
             }
-
-
         }
+
+        System.out.println();
         System.out.println(operatedList);
     }
 }
+
 
 
 //        IntStream stream =  list.chars();
