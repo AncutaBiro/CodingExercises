@@ -7,70 +7,42 @@ public class EvaluationExb {
         String givenString = "asta este problema de rezolvat";
         char X = 's';
         char Y = 'a';
-        String newList = givenString.replace("a", "");
-        String neeeewwList = newList.replace("s", "");
-        System.out.println(neeeewwList);
 
         deleteTheCharacters(givenString, X, Y);
-//        rearrange(givenString, x, y);
     }
 
-    public static void deleteTheCharacters(String list, char X, char Y) {
+    public static void deleteTheCharacters (String list, char X, char Y) {
+
+        int chXNumber = 0;
+        int chYNumber = 0;
 
         StringBuffer operatedList = new StringBuffer(list);
+        System.out.println(operatedList);
 
-        char[] listChar = list.toCharArray();
+        for (int i = 0; i < operatedList.length(); i++) {
 
-        for (int i = 0; i < list.length(); i++) {
-            System.out.print(operatedList.charAt(i));
+//            System.out.print(operatedList.charAt(i));
 
+            if (operatedList.charAt(i) == Y) {
+                operatedList.deleteCharAt(i);
+                chYNumber++;
+            }
             if (operatedList.charAt(i) == X) {
                 operatedList.deleteCharAt(i);
+                chXNumber++;
             }
         }
 
-        System.out.println();
+        for (int i = 0; i < chYNumber; i++) {
+            operatedList.append(Y);
+        }
+
+        for (int i = 0; i < chXNumber; i++) {
+            operatedList.insert(0, X);
+        }
+
         System.out.println(operatedList);
     }
 }
 
-
-
-//        IntStream stream =  list.chars();
-//
-//        List<Item> operatedList = new ArrayList<>();
-//        listChar.stream()
-//                .filter(item -> item.isQualified())
-//                .forEach(item -> {
-//                    item.operate();
-//                    operatedList.add(item);
-//                });
-//        itemList.removeAll(operatedList);
-//        stream.remo
-//
-//        / return the resultant array
-//        return stream.range(0, list.length())
-//                .filter(i -> i != index)
-//                .map(i -> arr[i])
-//                .toArray();
-
-
-//        String newString = S.replaceAll("[as]", "");
-
-
-//        list.set(list.indexOf(min), list.get(lastIndex));
-//        list.set(lastIndex, min);
-//
-//
-//        for (int i = 1; i < list.size(); i++) {
-//            if (list.get(i) > max) {
-//                max = list.get(i);
-//            }
-//
-//        }
-//        list.set(list.indexOf(max), list.get(0));
-//        list.set(0, max);
-//
-//        System.out.println(list);
-//    }
 
