@@ -1,3 +1,15 @@
+/*
+a. Se dă un șir de numere.
+Să se mute cel mai mare număr din șir pe prima poziție și cel mai mic pe ultima poziție.
+Exemplu:
+    pentru 23 4 6 12 34 8 2 19
+    rezultatul este 34 4 6 12 23 8 19 2
+
+ * @author Ancuta Biro
+ *         date 07.09.2020
+ */
+
+
 package org.example.JuniorMind;
 
 import java.util.ArrayList;
@@ -21,7 +33,7 @@ public class EvaluationExa {
         rearrange(list);
     }
 
-    public static void rearrange(List<Integer> list) {
+    public static void rearrange (List<Integer> list) {
 
         int min = list.get(0);
         int max = list.get(0);
@@ -46,6 +58,7 @@ public class EvaluationExa {
         list.set(list.indexOf(max), list.get(0));
         list.set(0, max);
 
-        System.out.println(list);
+        for (Integer i: list)
+        System.out.print (i + " ");
     }
 }
